@@ -14,7 +14,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-<!--  <base href="/">-->
+  <!--  <base href="$FLUTTER_BASE_HREF">-->
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -34,11 +34,10 @@
 
   <script>
     // The value below is injected by flutter build, do not touch.
-    var serviceWorkerVersion = "3911964365";
+    var serviceWorkerVersion = null;
   </script>
   <!-- This script adds the flutter initialization JS code -->
   <script src="flutter.js" defer></script>
-
 
 <style>
     * {
@@ -46,7 +45,8 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-}:root {
+}
+:root {
 	--hue: 223;
 	--bg: hsl(var(--hue),10%,90%);
 	--fg: hsl(var(--hue),10%,10%);
@@ -128,11 +128,12 @@ main {
 	to { stroke-dashoffset: 1165; }
 }
   </style>
-  
+
+
 </head>
 <body>
 
-  <svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
+<svg class="pl" viewBox="0 0 128 128" width="128px" height="128px" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="pl-grad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="hsl(193,90%,55%)" />
@@ -141,8 +142,9 @@ main {
   </defs>
   <circle class="pl__ring" r="56" cx="64" cy="64" fill="none" stroke="hsla(0,10%,10%,0.1)" stroke-width="16" stroke-linecap="round" />
   <path class="pl__worm" d="M92,15.492S78.194,4.967,66.743,16.887c-17.231,17.938-28.26,96.974-28.26,96.974L119.85,59.892l-99-31.588,57.528,89.832L97.8,19.349,13.636,88.51l89.012,16.015S81.908,38.332,66.1,22.337C50.114,6.156,36,15.492,36,15.492a56,56,0,1,0,56,0Z" fill="none" stroke="url(#pl-grad)" stroke-width="16" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="44 1111" stroke-dashoffset="10" />
-  </svg>
-  
+</svg>
+
+
   <script>
     window.addEventListener('load', function(ev) {
       // Download main.dart.js
